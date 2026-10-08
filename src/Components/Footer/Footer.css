@@ -4,5 +4,6 @@
     color: var(--header-text);
     background-color: var(--header-bg);
     font-family: 'Roboto', sans-serif;
+    color: var(--header-text);
 
 }
