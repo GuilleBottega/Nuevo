@@ -1,0 +1,22 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    color: var(--header-text);
+    background-color: var(--header-bg);
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.header .cambio-modo {
+    align-self: flex-end;
+    margin: 0.75rem;
+}
+
+.header p {
+    font-size: 1.2rem;
+    margin: 0;
+}
+.header .hora {
+   align-self: flex-end;
+    margin: 0.75rem;
+}
