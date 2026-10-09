@@ -1,0 +1,108 @@
+.contador {
+  width: min(100% - 2rem, 24rem);
+  margin: 2rem auto;
+  padding: 1.75rem;
+  box-sizing: border-box;
+  color: var(--text);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  box-shadow: var(--shadow);
+}
+
+.contador__titulo {
+  margin: 0 0 1rem;
+  color: var(--text-h);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.contador__valor {
+  margin: 0 0 1.25rem;
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+}
+
+.contador__acciones {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.contador__boton {
+  min-height: 2.25rem;
+  padding: 0.45rem 0.75rem;
+  color: var(--text-h);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 0.6rem;
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 160ms ease, border-color 160ms ease, transform 160ms ease;
+}
+
+.contador__boton:hover:not(:disabled) {
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+
+.contador__boton:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.contador__boton:disabled {
+  color: var(--text);
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.contador__boton--principal {
+  color: var(--header-text);
+  background: var(--header-bg);
+  border-color: var(--header-bg);
+}
+
+.contador__boton--principal:hover:not(:disabled) {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.contador__visibilidad {
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border);
+}
+
+.contador__etiqueta {
+  margin: 0 0 0.75rem;
+  color: var(--text);
+  font-size: 0.9rem;
+}
+
+.contador__boton--alternativo {
+  color: var(--accent);
+  background: var(--accent-bg);
+  border-color: var(--accent-border);
+}
+
+.contador__valor--secundario {
+  margin: 1rem 0 0;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 420px) {
+  .contador {
+    padding: 1.25rem;
+  }
+
+  .contador__acciones {
+    flex-direction: column;
+  }
+}

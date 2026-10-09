@@ -5,6 +5,7 @@ import Bienvenida from './Components/Bienvenida'
 import { ComponenteContenedor } from './Components/ComponenteContenedor'
 import { Header } from './Components/Header/Header'
 import { Footer } from './Components/Footer/Footer'
+import CambioNombre from './Components/CambioNombre/CambioNombre'
 
 function App() {
   const [modoOscuro, setModoOscuro] = useState(() =>
@@ -23,6 +24,7 @@ function App() {
       />
       <Bienvenida />
       <ComponenteContenedor />
+      <CambioNombre />
       <Footer />
     </>
   )

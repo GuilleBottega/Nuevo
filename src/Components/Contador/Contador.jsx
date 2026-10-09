@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import './Contador.css';
 
 
 function Contador() {
@@ -15,21 +16,27 @@ function Contador() {
   }
 
   return (
-    <div>
-      <h1>Contador</h1>
-      <p>{Contador}</p>
-      <button onClick={Sumar}>
+    <section className="contador">
+      <h3 className="contador__titulo">Contador</h3>
+      <p className="contador__valor" aria-live="polite" style={{ color: 'red' }}>
+        {Contador}
+      </p>
+      <div className="contador__acciones">
+        <button className="contador__boton contador__boton--principal" onClick={Sumar}>
         Incrementar
-      </button>
-      <button onClick={Restar} disabled={Contador === 0}>
+        </button>
+        <button className="contador__boton" onClick={Restar} disabled={Contador === 0}>
         Decrementar
-      </button>
-      <p>Estado para mostrar</p>
-      <button onClick={() => setMostrar(!mostrar)}>
+        </button>
+      </div>
+      <div className="contador__visibilidad">
+        <p className="contador__etiqueta">Estado para mostrar</p><br></br>
+        <button className="contador__boton contador__boton--alternativo" onClick={() => setMostrar(!mostrar)}>
         {mostrar ? 'Ocultar' : 'Mostrar'}
-      </button>
-      {mostrar && <p>{Contador}</p>}
-    </div>
+        </button>
+        {mostrar && <p className="contador__valor contador__valor--secundario">{Contador}</p>}
+      </div>
+    </section>
   );
 }
 
